@@ -1,0 +1,31 @@
+{
+  "name": "@hoanghuyquan/root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "all": "find . -name \"node_modules\" -type d -prune -exec rm -rf '{}' + -o -name \".yarn\" -type d -prune -exec rm -rf '{}' + -o -name \".yarnrc.yml\" -type f -exec rm -f '{}' + -o -name \".pnp.\" -type f -exec rm -f '{}' + -o -name \"yarn.lock\" -type f -exec rm -f '{}' + -o -name \"package-lock.json\" -type f -exec rm -f '{}' + -o -name \"Pods\" -type d -prune -exec rm -rf '{}' + -o -name \"Podfile.lock\" -type f -exec rm -f '{}' + && yarn cache clean && yarn",
+    "problem4": "yarn workspace @hoanghuyquan/problem4 start",
+    "problem5": "yarn workspace @hoanghuyquan/problem5 start",
+    "problem6": "yarn workspace @hoanghuyquan/problem6 start",
+    "lint": "yarn lint:problem5 || true && yarn lint:problem6 || true",
+    "lint:problem5": "yarn workspace @hoanghuyquan/problem5 lint",
+    "lint:problem6": "yarn workspace @hoanghuyquan/problem6 lint",
+    "commitlint": "commitlint --edit",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@commitlint/types": "^19.0.3",
+    "husky": "^9.1.7",
+    "typescript": "5.5.4"
+  },
+  "workspaces": {
+    "packages": [
+      "code-challenge/*"
+    ],
+    "nohoist": [
+      "**/*"
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "name": "@hoanghuyquan/problem5",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "dotenvx run --env-file=.env.dev -- nodemon ./src/index.ts",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.20.1",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.11",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.2.0",
+    "i18n": "^0.15.1",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "module-alias": "^2.2.3",
+    "mongoose": "^8.6.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.7.0",
+    "@types/bcrypt": "^5.0.2",
+    "@types/body-parser": "^1.19.5",
+    "@types/cors": "^2.8.17",
+    "@types/crypto-js": "^4.2.2",
+    "@types/express": "^5.0.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/i18n": "^0.13.12",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/lodash": "^4.17.5",
+    "@types/mongodb": "^4.0.7",
+    "@types/node": "^20.14.11",
+    "eslint": "9.x",
+    "eslint-plugin-sort-destructure-keys": "^2.0.0",
+    "eslint-plugin-sort-keys": "^2.3.5",
+    "eslint-plugin-typescript-sort-keys": "^3.3.0",
+    "globals": "^15.8.0",
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "5.5.4",
+    "typescript-eslint": "^7.16.1"
+  },
+  "_moduleAliases": {
+    "~constants": "./src/constants",
+    "~models": "./src/models",
+    "~routes": "./src/routes",
+    "~utils": "./src/utils",
+    "~localization": "./src/localization"
+  }
+}

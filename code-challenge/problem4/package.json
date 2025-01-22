@@ -1,0 +1,19 @@
+{
+  "name": "@hoanghuyquan/problem4",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "dotenvx run --env-file=.env.dev -- nodemon index.ts"
+  },
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.20.1",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.11",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "5.5.4"
+  }
+}
