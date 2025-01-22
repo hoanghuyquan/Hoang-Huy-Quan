@@ -63,6 +63,7 @@
 ![Untitled Diagram-Page-2 (1)](https://github.com/user-attachments/assets/db1bf074-6b9b-43be-bfa1-81b57b84c2ac)
 
 #### Cải thiện:
-- Hiện tại, tôi đang cộng điểm trực tiếp vào bảng `User`, điều này không tốt cho việc quản lý dữ liệu vì không thể xem lịch sử cộng điểm hoặc sao lưu. Để cải thiện, chúng ta có thể tách riêng một bảng `UserScore` để lưu lại các lần cộng điểm của người dùng.
+- Hiện tại, tôi đang sử dụng một biến userRole để kiểm tra quyền hạn của người dùng, nhằm đảm bảo chỉ những người có quyền mới có thể cập nhật điểm cho người dùng khác. Mặc dù cách làm này giúp ngăn ngừa việc cộng điểm trái phép, tuy nhiên việc sử dụng một biến đơn lẻ như vậy vẫn chưa phải là giải pháp tối ưu về mặt bảo mật và khả năng mở rộng. Một giải pháp cải thiện có thể là sử dụng hệ thống phân quyền chi tiết hơn, ví dụ như dựa trên bảng UserRoles để xác định quyền của người dùng, từ đó áp dụng các chính sách kiểm tra quyền linh hoạt và dễ dàng mở rộng trong tương lai. Điều này sẽ giúp giảm thiểu các lỗi bảo mật và giúp dễ dàng thay đổi hoặc mở rộng quyền hạn người dùng mà không cần phải sửa mã nguồn ở nhiều nơi.
+- Hiện tại, tôi đang cộng điểm trực tiếp vào bảng User, điều này có thể gây khó khăn trong việc quản lý dữ liệu lâu dài, vì chúng ta không thể theo dõi lịch sử các lần cộng điểm hoặc thực hiện sao lưu dễ dàng. Để cải thiện, chúng ta có thể tạo một bảng riêng biệt là UserScore để lưu trữ các lần thay đổi điểm của người dùng, giúp dễ dàng theo dõi và bảo mật dữ liệu hơn.
 
 
